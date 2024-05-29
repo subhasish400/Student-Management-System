@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>project title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.js" integrity="sha512-o4gKX6jcK0rdciOZ9X8COYkV9gviTJAbYEVW8aC3OgIRuaKDmcT9/OFXBVzHSSOxiTjsTktqrUvCUrHkQHSn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+   body{
+      background-image: url('http://127.0.0.1:5000/static/admin.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    h3{
+      text-align: center;
+    }
+
+    #form1, #form2, #form3{
+      width: 100%;
+      margin: 40px auto 0 auto;
+      padding: 25px 75px;
+      background-color: rgba(0, 0, 0, 0.50);
+      color: white;
+      display: none;
+    }
+    #home.active, #form1.active, #form2.active, #form3.active{
+        display: block;
+    }
+  </style>
+</head>
+<body >
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" >WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/class_timings"> class time</a></li>
+        <li><a href="/staff_timings">staff time</a></li>
+        <li><a href="/lecturer">view lecture</a></li>
+        <li><a  href="{{ url_for('logout')}}"><span class="glyphicon glyphicon-home"></span> Logout</a></li>      
+    </ul>
+    </div>
+  </div>
+</nav>
+      
+  <div class="container">
+        
+      <form action="/class_timings" method="post" id="form1" class="active">
+        <h3>Update class time table</h3>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>9:00 - 9:50</th>
+                <th>9:50 - 10:40</th>
+                <th>10:40 - 11:00</th>
+                <th>11:00 - 11:50</th>
+                <th>11:50 - 12:40</th>
+                <th>12:40 - 1:20</th>
+                <th>1:20 - 2:10</th>
+                <th>2:10 - 3:00</th>
+                <th>3:00 - 3:50</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th>Mon</th>
+              <td>
+                <select name="mon1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="mon2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="mon3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="mon4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="mon5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="mon6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="mon7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Tue</th>
+              <td>
+                <select name="tue1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="tue2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="tue3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="tue4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="tue5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="tue6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="tue7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Wed</th>
+              <td>
+                <select name="wed1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="wed2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="wed3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="wed4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="wed5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="wed6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="wed7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Thu</th>
+              <td>
+                <select name="thu1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="thu2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="thu3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="thu4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="thu5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="thu6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="thu7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Fri</th>
+              <td>
+                <select name="fri1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="fri2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="fri3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="fri4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="fri5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="fri6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="fri7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Sat</th>
+              <td>
+                <select name="sat1" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="sat2" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Break
+              </td>
+              <td>
+                <select name="sat3" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="sat4" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                Lunch
+              </td>
+              <td>
+                <select name="sat5" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="sat6" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+              <td>
+                <select name="sat7" id="" class="form-control">
+                  <option value="">select</option>
+                  <option value="python">python</option>
+                  <option value="ade">ADE</option>
+              </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <div class="col-lg-4">
+            <select name="sem" class="form-control" id="">
+              <option value="">Select semester</option>
+              <option value="1st">First</option>
+              <option value="2nd">Second</option>
+              <option value="3rd">Thired</option>
+            </select>
+          </div>
+          <div class="col-lg-4">
+            <select name="branch" class="form-control" id="">
+              <option value="">Select branch</option>
+              <option value="CS">Computer science</option>
+              <option value="EE">Electrical and Electronics</option>
+              <option value="civil">Civil</option>
+            </select>
+          </div>
+          <div class="col-lg-4">
+            <input type="submit" class="btn btn-success form-control">
+          </div>
+        </div>
+        
+    </form>
+
+  </div>
+
+  <script>
+    function toggleform(e) {
+    var Id =(e.target.getAttribute('data-value'))
+    let Items= ['#home','#form1', '#form2', '#form3'];
+    Items.map(function(item) {
+        if(Id === item ) {
+            $(item).addClass("active");
+        }
+        else {
+        $(item).removeClass("active");
+        }
+    })
+}
+
+</script>
+</body>
+</html>
